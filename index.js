@@ -43,12 +43,15 @@ const User = document.querySelector('#User');
 formForm.addEventListener('submit', function (e) {
   e.preventDefault();
   let result = ' ';
+  let valueP = ' ';
   const formData = new FormData(formForm);
   const data = formData;
   Array.from(data).forEach((elem) => {
     const [name, value] = elem;
     result = value.length;
+    valueP = value;
   });
+
 
   if (result > 5) {
     return (User.innerText = 'String length more than 5 : True');

@@ -1,15 +1,15 @@
 h1,
 h2 {
-  font-family: Lato;
 }
 
 body {
-  background: orange;
+  background: #caf0f8;
+  font-family: Lato;
 }
 
 h1 {
   text-align: center;
-  background: #000;
+  background: #03045e;
   color: #fff;
   line-height: 40px;
   height: 40px;
@@ -20,10 +20,10 @@ h1 {
 form {
   display: block;
   margin: 0 auto;
-  border: 1px solid #000;
-  background: red;
+  background: #03045e;
   width: 90%;
   padding: 0.25em;
+  border: solid #00b4d8 10px;
 }
 
 input[type='text'] {
@@ -32,6 +32,7 @@ input[type='text'] {
   display: block;
   margin: 0 auto;
   outline: none;
+  font-size: 1.2em;
 }
 
 label {
@@ -49,6 +50,8 @@ input[type='submit'] {
   font-size: 1.2em;
   outline: none;
   border: none;
+  background: #90e0ef;
+  text-transform: uppercase;
 }
 
 input[type='submit']:hover {
