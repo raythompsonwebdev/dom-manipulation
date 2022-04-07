@@ -8,6 +8,11 @@ const appDiv = document.getElementById('app');
 const title = document.createElement('H1');
 title.innerText = 'Submit Here';
 
+// Create a title dynamically
+const Answer = document.createElement('H2');
+Answer.setAttribute('id', 'User');
+Answer.innerText = '';
+
 // Create a form dynamically
 const form = document.createElement('FORM');
 form.setAttribute('id', 'myform');
@@ -28,19 +33,26 @@ form.appendChild(FN);
 form.appendChild(submitBtn);
 
 appDiv.appendChild(form);
+appDiv.appendChild(Answer);
 
 const formForm = document.querySelector('#myform');
-//const inputForm = document.querySelector('#text');
+const User = document.querySelector('#User');
 
 //console.log(inputForm);
 
-const formData = new FormData(formForm);
-
 formForm.addEventListener('submit', function (e) {
   e.preventDefault();
+  let result = ' ';
+  const formData = new FormData(formForm);
   const data = formData;
-  console.log(data);
-  Array.from(data).map((elem) => {
-    console.log(elem);
+  Array.from(data).forEach((elem) => {
+    const [name, value] = elem;
+    result = value.length;
   });
+
+  if (result > 5) {
+    return (User.innerText = 'String length more than 5 : True');
+  } else {
+    return (User.innerText = 'String length less than 5 : False');
+  }
 });
