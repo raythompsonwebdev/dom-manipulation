@@ -38,8 +38,6 @@ appDiv.appendChild(Answer);
 const formForm = document.querySelector('#myform');
 const User = document.querySelector('#User');
 
-//console.log(inputForm);
-
 formForm.addEventListener('submit', function (e) {
   e.preventDefault();
   let result = ' ';
@@ -51,7 +49,6 @@ formForm.addEventListener('submit', function (e) {
     result = value.length;
     valueP = value;
   });
-
 
   if (result > 5) {
     return (User.innerText = 'String length more than 5 : True');
